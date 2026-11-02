@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1st Anniversary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#14060d">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Quicksand:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="css/images/logo.png">
+</head>
+
+<body>
+
+    <!-- Developed by GrabCharles -->
+
+    <!-- soft glow that spreads from the flame once the candle is lit -->
+    <div class="glow" id="glow" aria-hidden="true"></div>
+
+    <main class="scene" id="scene">
+
+        <!-- ===== text zone: every block shares the same spot and fades in/out ===== -->
+        <section class="copy">
+
+            <!-- 1. before the candle is lit -->
+            <div class="block fade show" id="hintBlock">
+                <p class="hint-text">tap the candle to light it</p>
+                <svg class="hint-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 8l7 8 7-8" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="hint-sub">(turn your sound on)</p>
+            </div>
+
+            <!-- 2. the days counter -->
+            <div class="block fade" id="counterBlock">
+                <p class="counter-kicker">happy 1st anniversary, my love</p>
+                <p class="counter-num"><span id="days">0</span></p>
+                <p class="counter-label">days of us</p>
+            </div>
+
+            <!-- 3. the typed letter -->
+            <div class="block fade" id="letterBlock">
+                <p class="letter-para" id="para1"></p>
+                <p class="letter-para" id="para2"></p>
+            </div>
+
+            <!-- 4. the ring, the question, and the celebration -->
+            <div class="block fade ring-stage" id="ringStage">
+                <div class="ring-slot" id="ringSlot"></div>
+                <div class="ring-text">
+                    <div class="fade" id="askBlock">
+                        <h1 class="ask-title">Will you stay with me for another year?</h1>
+                        <p class="ask-sub">(and the one after that, and the one after that&hellip;)</p>
+                        <div class="ask-buttons">
+                            <button class="btn btn-yes" id="yesBtn" type="button">yes, always</button>
+                            <button class="btn btn-no" id="noBtn" type="button">let me think</button>
+                        </div>
+                    </div>
+                    <div class="fade" id="finalBlock">
+                        <h2 class="final-title">Happy 1st Anniversary</h2>
+                        <p class="final-line">I would choose you in every version of every year.<br>I love you,
+                            today and always.</p>
+                        <p class="final-sign" id="finalSign">&mdash; Charles</p>
+                        <p class="final-hint">tap anywhere for a little magic</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== the ring: floats up out of the flame ===== -->
+        <div class="ring" id="ring" aria-hidden="true">
+            <div class="ring-inner">
+                <div class="ring-halo"></div>
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldBand" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#fff0b8" />
+                            <stop offset="35%" stop-color="#f3c777" />
+                            <stop offset="70%" stop-color="#b98239" />
+                            <stop offset="100%" stop-color="#ffe3a0" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- band -->
+                    <circle cx="100" cy="142" r="48" fill="none" stroke="url(#goldBand)" stroke-width="13" />
+                    <circle cx="100" cy="142" r="41.5" fill="none" stroke="rgba(90,40,10,0.35)"
+                        stroke-width="2" />
+                    <circle class="band-shine" cx="100" cy="142" r="48" fill="none"
+                        stroke="rgba(255,255,255,0.65)" stroke-width="3" stroke-linecap="round"
+                        stroke-dasharray="38 264" />
+
+                    <!-- diamond -->
+                    <polygon class="facet f1" points="66,64 88,64 100,98" fill="#b8d4f0" />
+                    <polygon class="facet f2" points="88,64 112,64 100,98" fill="#e8f3ff" />
+                    <polygon class="facet f3" points="112,64 134,64 100,98" fill="#cfe0f5" />
+                    <polygon points="80,48 88,64 66,64" fill="#d9ecff" />
+                    <polygon points="120,48 134,64 112,64" fill="#fff0f5" />
+                    <polygon points="80,48 120,48 112,64 88,64" fill="#ffffff" />
+                    <path d="M80 48 L120 48 L134 64 L100 98 L66 64 Z" fill="none" stroke="url(#goldBand)"
+                        stroke-width="2" stroke-linejoin="round" />
+                    <circle cx="66" cy="64" r="3.5" fill="url(#goldBand)" />
+                    <circle cx="134" cy="64" r="3.5" fill="url(#goldBand)" />
+                    <circle cx="80" cy="48" r="3" fill="url(#goldBand)" />
+                    <circle cx="120" cy="48" r="3" fill="url(#goldBand)" />
+
+                    <!-- sparkles -->
+                    <g transform="translate(46 40) scale(1)"><path class="spark" style="animation-delay:0s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
+                            fill="#fff4cf" /></g>
+                    <g transform="translate(156 52) scale(0.8)"><path class="spark" style="animation-delay:0.6s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
+                            fill="#fff4cf" /></g>
+                    <g transform="translate(28 122) scale(0.6)"><path class="spark" style="animation-delay:1.1s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
+                            fill="#ffd9e3" /></g>
+                    <g transform="translate(172 128) scale(0.9)"><path class="spark" style="animation-delay:1.6s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
+                            fill="#fff4cf" /></g>
+                    <g transform="translate(100 20) scale(1.1)"><path class="spark" style="animation-delay:2s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
+                            fill="#ffffff" /></g>
+                </svg>
+            </div>
+        </div>
+
+        <!-- ===== the candle ===== -->
+        <div class="candle" id="candle" role="button" tabindex="0" aria-label="Light the candle">
+            <div class="flame-glow"></div>
+            <svg class="candle-svg" viewBox="0 0 120 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="wax" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#ecd2b0" />
+                        <stop offset="45%" stop-color="#fff3de" />
+                        <stop offset="100%" stop-color="#e2c19a" />
+                    </linearGradient>
+                    <linearGradient id="saucer" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#b98239" />
+                        <stop offset="50%" stop-color="#f3c777" />
+                        <stop offset="100%" stop-color="#a06f2e" />
+                    </linearGradient>
+                </defs>
+
+                <!-- saucer -->
+                <ellipse cx="60" cy="208" rx="54" ry="9" fill="#7a4a2b" />
+                <ellipse cx="60" cy="204" rx="48" ry="7.5" fill="url(#saucer)" />
+
+                <!-- body -->
+                <rect x="32" y="70" width="56" height="134" fill="url(#wax)" />
+                <rect x="38" y="76" width="5" height="120" rx="2.5" fill="#ffffff" opacity="0.28" />
+                <rect x="32" y="172" width="56" height="12" fill="#e0708f" opacity="0.9" />
+                <rect x="32" y="172" width="56" height="2" fill="#ffffff" opacity="0.25" />
+                <text x="60" y="154" text-anchor="middle" font-family="Dancing Script, cursive" font-size="54"
+                    font-weight="700" fill="#c98a4b" opacity="0.8">1</text>
+
+                <!-- drips + top -->
+                <rect x="34" y="68" width="10" height="36" rx="5" fill="#fff6e6" />
+                <rect x="76" y="68" width="9" height="50" rx="4.5" fill="#fff6e6" />
+                <rect x="56" y="68" width="8" height="24" rx="4" fill="#fff6e6" />
+                <ellipse cx="60" cy="70" rx="28" ry="7" fill="#fff8ea" />
+                <ellipse class="pool" cx="60" cy="70" rx="19" ry="4.2" fill="#ffe9c4" />
+
+                <!-- wick -->
+                <path d="M60 70 L60 57" stroke="#2a1812" stroke-width="2.6" stroke-linecap="round" />
+                <circle class="wick-ember" cx="60" cy="57" r="2.4" fill="#ff6a2a" />
+            </svg>
+
+            <div class="flame">
+                <svg viewBox="0 0 26 52" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="flameOuter" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#ffe08a" />
+                            <stop offset="55%" stop-color="#ffab45" />
+                            <stop offset="100%" stop-color="#ff7a2a" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M13 0 C15 14 26 22 26 37 A13 15 0 0 1 0 37 C0 22 11 14 13 0 Z"
+                        fill="url(#flameOuter)" />
+                    <path d="M13 18 C14 26 20 30 20 39 A7 9 0 0 1 6 39 C6 30 12 26 13 18 Z" fill="#fff4cf" />
+                    <ellipse cx="13" cy="46" rx="5" ry="4" fill="#7fb2ff" opacity="0.55" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="table" aria-hidden="true"></div>
+    </main>
+
+    <div class="sound-toggle" id="soundToggle" title="mute/unmute">
+        <span id="soundIcon">&#9834;</span>
+    </div>
+
+    <!-- on top of everything: floating bokeh lights + the heart celebration -->
+    <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+
+    <audio id="bgMusic" src="css/audios/enchanted.mp3" loop></audio>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
