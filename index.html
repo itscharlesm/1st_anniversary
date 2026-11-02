@@ -29,8 +29,8 @@
             <div class="block fade show" id="hintBlock">
                 <p class="hint-text">tap the candle to light it</p>
                 <svg class="hint-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 8l7 8 7-8" fill="none" stroke="currentColor" stroke-width="1.8"
-                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5 8l7 8 7-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
                 <p class="hint-sub">(turn your sound on)</p>
             </div>
@@ -71,7 +71,7 @@
             </div>
         </section>
 
-        <!-- ===== the ring: floats up out of the flame ===== -->
+        <!-- the ring: floats up out of the flame -->
         <div class="ring" id="ring" aria-hidden="true">
             <div class="ring-inner">
                 <div class="ring-halo"></div>
@@ -87,11 +87,9 @@
 
                     <!-- band -->
                     <circle cx="100" cy="142" r="48" fill="none" stroke="url(#goldBand)" stroke-width="13" />
-                    <circle cx="100" cy="142" r="41.5" fill="none" stroke="rgba(90,40,10,0.35)"
-                        stroke-width="2" />
-                    <circle class="band-shine" cx="100" cy="142" r="48" fill="none"
-                        stroke="rgba(255,255,255,0.65)" stroke-width="3" stroke-linecap="round"
-                        stroke-dasharray="38 264" />
+                    <circle cx="100" cy="142" r="41.5" fill="none" stroke="rgba(90,40,10,0.35)" stroke-width="2" />
+                    <circle class="band-shine" cx="100" cy="142" r="48" fill="none" stroke="rgba(255,255,255,0.65)"
+                        stroke-width="3" stroke-linecap="round" stroke-dasharray="38 264" />
 
                     <!-- diamond -->
                     <polygon class="facet f1" points="66,64 88,64 100,98" fill="#b8d4f0" />
@@ -108,26 +106,31 @@
                     <circle cx="120" cy="48" r="3" fill="url(#goldBand)" />
 
                     <!-- sparkles -->
-                    <g transform="translate(46 40) scale(1)"><path class="spark" style="animation-delay:0s"
-                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
-                            fill="#fff4cf" /></g>
-                    <g transform="translate(156 52) scale(0.8)"><path class="spark" style="animation-delay:0.6s"
-                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
-                            fill="#fff4cf" /></g>
-                    <g transform="translate(28 122) scale(0.6)"><path class="spark" style="animation-delay:1.1s"
-                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
-                            fill="#ffd9e3" /></g>
-                    <g transform="translate(172 128) scale(0.9)"><path class="spark" style="animation-delay:1.6s"
-                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
-                            fill="#fff4cf" /></g>
-                    <g transform="translate(100 20) scale(1.1)"><path class="spark" style="animation-delay:2s"
-                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z"
-                            fill="#ffffff" /></g>
+                    <g transform="translate(46 40) scale(1)">
+                        <path class="spark" style="animation-delay:0s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z" fill="#fff4cf" />
+                    </g>
+                    <g transform="translate(156 52) scale(0.8)">
+                        <path class="spark" style="animation-delay:0.6s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z" fill="#fff4cf" />
+                    </g>
+                    <g transform="translate(28 122) scale(0.6)">
+                        <path class="spark" style="animation-delay:1.1s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z" fill="#ffd9e3" />
+                    </g>
+                    <g transform="translate(172 128) scale(0.9)">
+                        <path class="spark" style="animation-delay:1.6s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z" fill="#fff4cf" />
+                    </g>
+                    <g transform="translate(100 20) scale(1.1)">
+                        <path class="spark" style="animation-delay:2s"
+                            d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z" fill="#ffffff" />
+                    </g>
                 </svg>
             </div>
         </div>
 
-        <!-- ===== the candle ===== -->
+        <!-- the candle -->
         <div class="candle" id="candle" role="button" tabindex="0" aria-label="Light the candle">
             <div class="flame-glow"></div>
             <svg class="candle-svg" viewBox="0 0 120 220" xmlns="http://www.w3.org/2000/svg">
@@ -177,8 +180,7 @@
                             <stop offset="100%" stop-color="#ff7a2a" />
                         </linearGradient>
                     </defs>
-                    <path d="M13 0 C15 14 26 22 26 37 A13 15 0 0 1 0 37 C0 22 11 14 13 0 Z"
-                        fill="url(#flameOuter)" />
+                    <path d="M13 0 C15 14 26 22 26 37 A13 15 0 0 1 0 37 C0 22 11 14 13 0 Z" fill="url(#flameOuter)" />
                     <path d="M13 18 C14 26 20 30 20 39 A7 9 0 0 1 6 39 C6 30 12 26 13 18 Z" fill="#fff4cf" />
                     <ellipse cx="13" cy="46" rx="5" ry="4" fill="#7fb2ff" opacity="0.55" />
                 </svg>

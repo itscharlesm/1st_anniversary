@@ -1,7 +1,5 @@
-/* ==========================================================================
-   1st Anniversary — a candlelit evening
-   Wine night, blush rose, candle gold. One candle, one ring, one question.
-   ========================================================================== */
+/* 1st Anniversary — a candlelit evening
+   Wine night, blush rose, candle gold. One candle, one ring, one question. */
 
 :root {
     --night: #14060d;
@@ -36,7 +34,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     overflow: hidden;
@@ -50,7 +49,9 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
     margin: 0;
 }
 
@@ -68,9 +69,7 @@ button {
     outline-offset: 3px;
 }
 
-/* ==========================================================================
-   Glow + particles
-   ========================================================================== */
+/* Glow + particles */
 
 .glow {
     position: fixed;
@@ -91,8 +90,15 @@ button {
 }
 
 @keyframes glowPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.82; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.82;
+    }
 }
 
 .particles {
@@ -104,9 +110,7 @@ button {
     pointer-events: none;
 }
 
-/* ==========================================================================
-   Scene layout
-   ========================================================================== */
+/* Scene layout */
 
 .scene {
     position: fixed;
@@ -142,9 +146,7 @@ button {
     visibility: visible;
 }
 
-/* ==========================================================================
-   Table
-   ========================================================================== */
+/* Table */
 
 .table {
     position: absolute;
@@ -174,9 +176,7 @@ button {
     opacity: 1;
 }
 
-/* ==========================================================================
-   Hint (before the candle is lit)
-   ========================================================================== */
+/* Hint (before the candle is lit) */
 
 .hint-text {
     font-style: italic;
@@ -204,18 +204,30 @@ button {
 }
 
 @keyframes hintPulse {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 @keyframes hintBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(7px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
 }
 
-/* ==========================================================================
-   Counter
-   ========================================================================== */
+/* Counter */
 
 .counter-kicker {
     font-family: var(--font-script);
@@ -245,9 +257,7 @@ button {
     opacity: 0.8;
 }
 
-/* ==========================================================================
-   Letter
-   ========================================================================== */
+/* Letter */
 
 .letter-para {
     font-style: italic;
@@ -257,7 +267,7 @@ button {
     text-shadow: 0 0 18px rgba(255, 190, 120, 0.2);
 }
 
-.letter-para + .letter-para {
+.letter-para+.letter-para {
     margin-top: 1.1rem;
 }
 
@@ -276,13 +286,19 @@ button {
 }
 
 @keyframes blink {
-    0%, 49% { opacity: 1; }
-    50%, 100% { opacity: 0; }
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
 }
 
-/* ==========================================================================
-   Ring stage — slot, question, finale
-   ========================================================================== */
+/* Ring stage — slot, question, finale */
 
 .ring-stage {
     display: flex;
@@ -302,7 +318,7 @@ button {
     width: 100%;
 }
 
-.ring-text > .fade {
+.ring-text>.fade {
     grid-area: 1 / 1;
 }
 
@@ -362,11 +378,27 @@ button {
 }
 
 @keyframes beat {
-    0%, 100% { transform: scale(1); }
-    12% { transform: scale(1.07); }
-    24% { transform: scale(1); }
-    36% { transform: scale(1.05); }
-    48% { transform: scale(1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    12% {
+        transform: scale(1.07);
+    }
+
+    24% {
+        transform: scale(1);
+    }
+
+    36% {
+        transform: scale(1.05);
+    }
+
+    48% {
+        transform: scale(1);
+    }
 }
 
 .final-title {
@@ -402,9 +434,7 @@ button {
     opacity: 0.6;
 }
 
-/* ==========================================================================
-   The ring
-   ========================================================================== */
+/* The ring */
 
 .ring {
     position: fixed;
@@ -455,8 +485,13 @@ button {
     animation: facet 2.8s ease-in-out infinite;
 }
 
-.facet.f2 { animation-delay: 0.9s; }
-.facet.f3 { animation-delay: 1.8s; }
+.facet.f2 {
+    animation-delay: 0.9s;
+}
+
+.facet.f3 {
+    animation-delay: 1.8s;
+}
 
 .spark {
     transform-box: fill-box;
@@ -466,32 +501,64 @@ button {
 }
 
 @keyframes ringFloat {
-    0%, 100% { transform: translateY(0) rotate(-2deg); }
-    50% { transform: translateY(-7px) rotate(2deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-7px) rotate(2deg);
+    }
 }
 
 @keyframes haloPulse {
-    0%, 100% { opacity: 0.75; transform: scale(0.96); }
-    50% { opacity: 1; transform: scale(1.06); }
+
+    0%,
+    100% {
+        opacity: 0.75;
+        transform: scale(0.96);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
 }
 
 @keyframes bandShine {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes facet {
-    0%, 100% { opacity: 0.72; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.72;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 @keyframes twinkle {
-    0%, 100% { transform: scale(0) rotate(0deg); opacity: 0; }
-    50% { transform: scale(1) rotate(45deg); opacity: 1; }
+
+    0%,
+    100% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+    }
 }
 
-/* ==========================================================================
-   The candle
-   ========================================================================== */
+/* The candle */
 
 .candle {
     position: absolute;
@@ -547,8 +614,15 @@ button {
 }
 
 @keyframes emberPulse {
-    0%, 100% { opacity: 0.35; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.35;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .flame {
@@ -578,15 +652,39 @@ button {
 }
 
 @keyframes ignite {
-    from { transform: scale(0); opacity: 0; }
-    to { transform: scale(var(--fs)); opacity: 1; }
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(var(--fs));
+        opacity: 1;
+    }
 }
 
 @keyframes flicker {
-    0%, 100% { transform: scale(calc(var(--fs) * 1), calc(var(--fs) * 1)) rotate(-1deg); opacity: 1; }
-    25% { transform: scale(calc(var(--fs) * 0.96), calc(var(--fs) * 1.06)) rotate(1.6deg); opacity: 0.95; }
-    50% { transform: scale(calc(var(--fs) * 1.03), calc(var(--fs) * 0.97)) rotate(-1.6deg); opacity: 1; }
-    75% { transform: scale(calc(var(--fs) * 0.98), calc(var(--fs) * 1.04)) rotate(1deg); opacity: 0.97; }
+
+    0%,
+    100% {
+        transform: scale(calc(var(--fs) * 1), calc(var(--fs) * 1)) rotate(-1deg);
+        opacity: 1;
+    }
+
+    25% {
+        transform: scale(calc(var(--fs) * 0.96), calc(var(--fs) * 1.06)) rotate(1.6deg);
+        opacity: 0.95;
+    }
+
+    50% {
+        transform: scale(calc(var(--fs) * 1.03), calc(var(--fs) * 0.97)) rotate(-1.6deg);
+        opacity: 1;
+    }
+
+    75% {
+        transform: scale(calc(var(--fs) * 0.98), calc(var(--fs) * 1.04)) rotate(1deg);
+        opacity: 0.97;
+    }
 }
 
 .flame-glow {
@@ -610,13 +708,18 @@ button {
 }
 
 @keyframes flameGlow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
 }
 
-/* ==========================================================================
-   Sound toggle
-   ========================================================================== */
+/* Sound toggle */
 
 .sound-toggle {
     position: fixed;
@@ -653,9 +756,7 @@ button {
     transform: scale(1.08);
 }
 
-/* ==========================================================================
-   Small screens + reduced motion
-   ========================================================================== */
+/* Small screens + reduced motion */
 
 @media (max-height: 540px) {
     :root {
@@ -669,8 +770,17 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hint-text, .hint-arrow, .btn-yes, .ring-inner, .ring-halo, .band-shine,
-    .facet, .glow.lit, .candle.lit .flame-glow, .candle:not(.lit) .wick-ember {
+
+    .hint-text,
+    .hint-arrow,
+    .btn-yes,
+    .ring-inner,
+    .ring-halo,
+    .band-shine,
+    .facet,
+    .glow.lit,
+    .candle.lit .flame-glow,
+    .candle:not(.lit) .wick-ember {
         animation: none !important;
     }
 

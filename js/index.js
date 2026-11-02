@@ -1,7 +1,4 @@
-/* ==========================================================================
-   1st Anniversary — a candle, a ring, and one question
-   Everything you might want to personalize lives in CONFIG below.
-   ========================================================================== */
+/* 1st Anniversary — a candle, a ring, and one question */
 
 const CONFIG = {
     daysTogether: 365,
@@ -44,16 +41,14 @@ const CONFIG = {
 
     $('finalSign').textContent = '— ' + CONFIG.signature;
 
-    /* ======================================================================
-       Particles — warm floating bokeh, plus hearts and sparkles on demand
-       ====================================================================== */
+    /* Particles — warm floating bokeh, plus hearts and sparkles on demand */
 
     const fx = (function () {
         const canvas = $('particles');
         const ctx = canvas.getContext && canvas.getContext('2d');
 
         if (!ctx) {
-            const noop = function () {};
+            const noop = function () { };
             return { resize: noop, start: noop, setIntensity: noop, radial: noop, celebrate: noop };
         }
 
@@ -253,9 +248,7 @@ const CONFIG = {
         };
     })();
 
-    /* ======================================================================
-       Layout helpers
-       ====================================================================== */
+    /* Layout helpers */
 
     function flameCenter() {
         const r = candle.getBoundingClientRect();
@@ -280,10 +273,8 @@ const CONFIG = {
     function show(el) { el.classList.add('show'); }
     function hide(el) { el.classList.remove('show'); }
 
-    /* ======================================================================
-       Typewriter — the full text is laid out up front (hidden), so nothing
-       jumps around while it types
-       ====================================================================== */
+    /* Typewriter — the full text is laid out up front (hidden), so nothing
+       jumps around while it types */
 
     let skipTyping = false;
 
@@ -333,9 +324,7 @@ const CONFIG = {
         });
     }
 
-    /* ======================================================================
-       The story
-       ====================================================================== */
+    /* The story */
 
     let started = false;
     let stage = 'unlit';
@@ -431,9 +420,7 @@ const CONFIG = {
         show(finalBlock);
     }
 
-    /* ======================================================================
-       The button that doesn't want to say no
-       ====================================================================== */
+    /* The button that doesn't want to say no */
 
     const NO_LABELS = ['let me think', 'hmm, not so fast', 'are you sure?', 'think again', 'ok fine, yes'];
     let dodges = 0;
@@ -478,9 +465,7 @@ const CONFIG = {
 
     yesBtn.addEventListener('click', yes);
 
-    /* ======================================================================
-       Wiring
-       ====================================================================== */
+    /* Wiring */
 
     candle.addEventListener('click', light);
     candle.addEventListener('keydown', function (e) {
@@ -505,7 +490,7 @@ const CONFIG = {
 
     soundToggle.addEventListener('click', function () {
         if (bgMusic.paused) {
-            bgMusic.play().catch(function () {});
+            bgMusic.play().catch(function () { });
             soundToggle.classList.remove('muted');
             soundIcon.textContent = '♪';
         } else {
