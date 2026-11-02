@@ -6,8 +6,8 @@ const CONFIG = {
     typeSpeedMs: 36,
     // The letter: two paragraphs. Replace with your own words.
     paragraphs: [
-        "365 days ago I didn't know a love could be this gentle and this loud at the same time. Somewhere between our first hello and today, you became my favorite place to be.",
-        "Thank you for every laugh, every patient moment, and every ordinary day you turned into a celebration. I would choose you in every version of every year."
+        "365 days ago, I didn't know I could love someone the way I love you. You were not my first, but you were the first of everything. Somewhere between our first \'hi\' and today, you became my favorite place to be.",
+        "Thank you for every laugh, every patient moment, and every ordinary day that you turned into a celebration. Just know that I'd give up forever just to be with you.""
     ]
 };
 
